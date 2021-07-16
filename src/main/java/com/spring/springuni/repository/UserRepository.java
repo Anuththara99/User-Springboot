@@ -9,13 +9,18 @@ import java.util.List;
 public interface UserRepository {
 
     User createUser(User user);
+    //to add new user to the db
 
     User editUser(User user);
+    //to edit existing user using id
 
     String deleteUser(int userId);
+    //to delete user from the db using id
 
     User searchUser(int userId);
+    //to search user by id
 
     List<User> allUsers();
+    //to view all the users
 
 }
