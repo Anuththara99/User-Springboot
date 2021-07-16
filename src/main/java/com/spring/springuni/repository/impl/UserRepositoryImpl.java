@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class UserRepositoryImpl implements UserRepository {
+public abstract class UserRepositoryImpl implements UserRepository {
 
     private static final String INSERT_QUERY = "INSERT INTO User(userId,userName,dOB,userTel)" +
             "VALUES(?,?,?,?)";

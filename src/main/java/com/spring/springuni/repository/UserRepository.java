@@ -1,12 +1,13 @@
 package com.spring.springuni.repository;
 
 import com.spring.springuni.domain.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface UserRepository {
+public interface UserRepository extends JpaRepository<User,Integer>{
 
     User createUser(User user);
     //to add new user to the db
@@ -21,6 +22,8 @@ public interface UserRepository {
     //to search user by id
 
     List<User> allUsers();
+
+    User findByUserName(String userName);
     //to view all the users
 
 }

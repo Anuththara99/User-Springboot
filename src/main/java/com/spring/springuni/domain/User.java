@@ -1,21 +1,24 @@
 package com.spring.springuni.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name="User")
 public class User {
+    @Id
     private int userId;
     private String userName;
     private Date dOB;
     private String userTel;
-
-    public User(int userId, String userName, Date dOB, String userTel) {
-        this.userId = userId;
-        this.userName = userName;
-        this.dOB = dOB;
-        this.userTel = userTel;
-    }
 
     public int getUserId() {
         return userId;
